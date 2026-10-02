@@ -70,7 +70,7 @@ class DBHelper(context: Context) :
         return valido
     }
 
-    // Para borrar se exige usuario Y contraseña correctos
+
     fun borrarUsuario(usuario: String, password: String): Boolean {
         if (!validarLogin(usuario, password)) return false
         return writableDatabase.delete("usuarios", "usuario = ?", arrayOf(usuario)) > 0

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnBorrar).setOnClickListener { borrarUsuario() }
     }
 
-    // Valida que ningún campo esté vacío
+
     private fun camposValidos(): Boolean {
         val usuario = etUsuario.text.toString().trim()
         val password = etPassword.text.toString()
