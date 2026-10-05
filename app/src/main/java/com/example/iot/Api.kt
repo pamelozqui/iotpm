@@ -1,12 +1,18 @@
 package com.example.iot
 
+import android.os.Build
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 
 object Api {
 
-    private const val BASE = "http://192.168.137.158/"
+    private val esEmulador = Build.FINGERPRINT.contains("generic") ||
+            Build.FINGERPRINT.contains("emulator") ||
+            Build.MODEL.contains("sdk", ignoreCase = true)
+
+
+    private val BASE = if (esEmulador) "http://192.168.137.50/" else "http://localhost:8080/"
 
     fun post(archivo: String, usuario: String, password: String): String {
         return try {
