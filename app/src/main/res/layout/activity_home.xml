@@ -10,12 +10,25 @@
         android:id="@+id/tvBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modo sensor" />
+
+    <Button
+        android:id="@+id/btnMonitoreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modo monitoreo" />
 
     <Button
         android:id="@+id/btnSalir"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Cerrar sesión" />
 </LinearLayout>
